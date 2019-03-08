@@ -19,5 +19,10 @@ public class Farm {
     public  Farm(){
         cornStalk = new CornStalk();
         cornStalk.yield();
+        //farm
+        //field
+        //croprow
+        //crops
+        //animals
     }
 }

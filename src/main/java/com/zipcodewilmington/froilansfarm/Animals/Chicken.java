@@ -10,7 +10,6 @@ public class Chicken implements Producer, Animal {
 
     private Boolean hasBeenFertilized;
     private EarCorn chicFood;
-
     private Boolean isChicFed;
 
     public Chicken() {
@@ -33,9 +32,8 @@ public class Chicken implements Producer, Animal {
         }
     }
 
-    public Boolean fertilize() {
+    public void fertilize() {
         this.hasBeenFertilized = true;
-        return hasBeenFertilized;
     }
 
     public void eat(Edible food) {

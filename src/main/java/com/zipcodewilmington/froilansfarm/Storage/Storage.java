@@ -8,17 +8,17 @@ import java.util.List;
 
 public abstract class Storage<T> {
 
-    List<T> storage;
+    List<T> objectsToBeStored;
 
     public Storage() {
-        this.storage = new ArrayList<T>();
+        this.objectsToBeStored = new ArrayList<T>();
     }
 
     public void add(T toBeStored){
-        this.storage.add(toBeStored);
+        this.objectsToBeStored.add(toBeStored);
     }
 
     public void remove(T toBeRemoved){
-        this.storage.remove(toBeRemoved);
+        this.objectsToBeStored.remove(toBeRemoved);
     }
 }

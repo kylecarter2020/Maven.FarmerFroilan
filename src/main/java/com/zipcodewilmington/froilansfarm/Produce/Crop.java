@@ -1,5 +1,4 @@
 package com.zipcodewilmington.froilansfarm.Produce;
-
 import com.zipcodewilmington.froilansfarm.Interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.Interfaces.Producer;
 
@@ -15,10 +14,10 @@ public abstract class Crop<T extends Edible> implements Producer {
     public abstract T yield();
 
     public void fertilize(){
-        hasBeenFertilized = true;
+        this.hasBeenFertilized = true;
     }
 
     public void harvest(){
-        hasBeenHarvested = true;
+        this.hasBeenHarvested = true;
     }
 }
