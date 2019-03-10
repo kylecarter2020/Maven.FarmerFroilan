@@ -1,10 +1,22 @@
 package com.zipcodewilmington.froilansfarm.vehicles;
+import com.zipcodewilmington.froilansfarm.Farm;
+import com.zipcodewilmington.froilansfarm.interfaces.Edible;
+import com.zipcodewilmington.froilansfarm.people.FarmWorker;
+import com.zipcodewilmington.froilansfarm.produce.*;
+import com.zipcodewilmington.froilansfarm.storage.Field;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class CropDusterTest {
+    private Farm farm;
+
     CropDuster cropDusterObj = new CropDuster();
+
+
 
     @Test
     public void makeNoiseTest() {
@@ -15,9 +27,12 @@ public class CropDusterTest {
 
     @Test
     public void fertilizeTest() {
-        //get field croprows
-        //get field crops
-        //fertilize the crops
+       //Given
+        Boolean isCropRowFertilized = false;
+        CropRow cropRow = new CropRow();
+        cropRow.getCrops().get(0);
+
+
     }
 
     @Test
@@ -26,5 +41,16 @@ public class CropDusterTest {
 
     @Test
     public void rideTest() {
+        //Given
+        Boolean beforeFlown = false;
+        //When
+        cropDusterObj.ride();
+        Boolean afterFlown = cropDusterObj.getCropDusterFlown();
+        //Then
+        Assert.assertNotEquals(beforeFlown, afterFlown);
+
+
+
+
     }
 }

@@ -2,6 +2,7 @@ package com.zipcodewilmington.froilansfarm.vehicles;
 
 import com.zipcodewilmington.froilansfarm.interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.interfaces.FarmVehicle;
+import com.zipcodewilmington.froilansfarm.people.FarmWorker;
 import com.zipcodewilmington.froilansfarm.produce.Crop;
 import com.zipcodewilmington.froilansfarm.produce.CropRow;
 import com.zipcodewilmington.froilansfarm.storage.Field;
@@ -9,7 +10,8 @@ import com.zipcodewilmington.froilansfarm.storage.Storage;
 
 public class CropDuster<T extends Edible> extends Aircraft implements FarmVehicle {
 
-    Crop<T> crop;
+   private Crop<T> crop;
+   private Boolean isCropDusterFlown = false;
 
     public void fertilize(CropRow row) {
         row.getCrops();
@@ -25,6 +27,15 @@ public class CropDuster<T extends Edible> extends Aircraft implements FarmVehicl
     }
 
     public void ride() {
+        this.isCropDusterFlown = true;
+     }
 
+     public Boolean getCropDusterFlown() {
+        return this.isCropDusterFlown;
+     }
+
+    @Override
+    public void fly() {
+        super.fly();
     }
 }

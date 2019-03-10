@@ -14,6 +14,4 @@ public class TomatoPlant extends Crop<Tomato>{
         }
         return null;
     }
-
-
 }

@@ -3,15 +3,16 @@ package com.zipcodewilmington.froilansfarm.produce;
 import com.zipcodewilmington.froilansfarm.interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.interfaces.Producer;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CropRow <T extends Crop> implements Producer {
-    private List<T> crops;
+    private List<Crop> crops = new ArrayList<>();
 
     public CropRow() {
     }
 
-    public CropRow(List<T> crop) {
+    public CropRow(List<Crop> crop) {
         this.crops = crop;
     }
 
@@ -19,11 +20,11 @@ public class CropRow <T extends Crop> implements Producer {
         return null;
     }
 
-    public void addCrop(List<T> crops) {
+    public void addCrop(List<Crop> crops) {
         this.crops = crops;
     }
 
-    public List<T> getCrops() {
+    public List<Crop> getCrops() {
         return crops;
     }
 
