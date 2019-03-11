@@ -8,7 +8,7 @@ public class Tractor implements FarmVehicle {
         crop.harvest();
     }
 
-    public void operate() {
+    public void operate() {this.ride();
 
     }
 

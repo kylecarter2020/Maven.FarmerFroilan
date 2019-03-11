@@ -1,9 +1,6 @@
 package com.zipcodewilmington.froilansfarm.vehicles;
 import com.zipcodewilmington.froilansfarm.Farm;
 import com.zipcodewilmington.froilansfarm.factories.CropFactory;
-import com.zipcodewilmington.froilansfarm.interfaces.Edible;
-import com.zipcodewilmington.froilansfarm.people.FarmWorker;
-import com.zipcodewilmington.froilansfarm.people.FarmerDecorator;
 import com.zipcodewilmington.froilansfarm.people.Person;
 import com.zipcodewilmington.froilansfarm.people.RiderDecorator;
 import com.zipcodewilmington.froilansfarm.produce.*;
@@ -20,8 +17,7 @@ public class CropDusterTest {
     Field field =  Field.getInstance();
     CropDuster cropDusterObj = new CropDuster();
     CropRow<CornStalk> cropRow;
-    Person farmer;
-     Farm farm = new Farm();
+
 
      @Before
      public void setup() {
